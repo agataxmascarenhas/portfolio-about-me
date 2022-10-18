@@ -1,0 +1,170 @@
+/* declarar as variaveis css */
+
+:root {
+  --color-text-primary: #002324;
+  --color-text-secondary: #fff;
+  --color-primary: #6608c5;
+  --color-secondary: #fff;
+}
+
+/* styles reset - usar border-box width=content+padding+border */
+* {
+  box-sizing: border-box;
+}
+
+/* estilo do body - generalizado */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0; /* tinha uma margin*/
+}
+
+footer {
+  background-color: var(--color-text-primary);
+  width: auto;
+  height: 246px;
+}
+
+/* retirar estilos da lista que vem por default assim como o padding e a margin */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 61px 0px 39px 0px;
+}
+
+/* titulo h2 é todo igual ao longo do documento*/
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+/* end of styles reset*/
+
+/* about me section */
+.about {
+  position: relative;
+  background-color: var(--color-primary);
+  color: var(--color-text-secondary);
+  padding: 100px 0 120px;
+  margin-bottom: auto;
+  clip-path: polygon(0% 10%, 100% 10%, 100% 87%, 98% 87%, 0% 100%);
+}
+
+@media (min-width: 992px) {
+  .about-content {
+    display: flex;
+    max-width: 960px;
+    margin: 65px auto 0px auto;
+  }
+  .about-description {
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0px 70px 90px 70px;
+  }
+  .about-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    /*box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  }
+}
+
+@media (max-width: 991px) {
+  .about-description {
+    /*line-height: 28px;
+    font-weight: 400;*/
+    margin: 40px 40px 40px 40px;
+    text-align: center;
+  }
+  .button-secondary {
+    display: inline-block;
+    text-align: center;
+  }
+  .about-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+  }
+}
+
+/*.about-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  /*box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}*/
+
+.about-quote {
+  text-align: center;
+  margin-top: 88px;
+}
+
+.about-description p {
+  margin: 0px 0px 40px 0px;
+}
+
+blockquote {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 36px;
+  font-size: 24px;
+}
+
+cite {
+  font-style: normal;
+  line-height: 1.4;
+  font-weight: 400;
+}
+/* end of about me section */
+
+/* projects section styles */
+@media (min-width: 992px) {
+  .projects-article {
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.projects-article {
+  padding: 40px;
+  text-align: justify;
+}
+
+.projects-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.projects-article div {
+  padding-right: 40px;
+}
+
+.projects-article .button {
+  margin: 10px;
+}
+
+.button-secondary {
+  color: var(--color-secondary); /*cor do texto do botao*/
+  border: 2px solid var(--color-secondary);
+}
+
+.button-secondary:hover {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
